@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         //将所有的title传入Fragment_1对象 将textview内容改变
         for (int i = 0; i <mtitle.length ; i++) {
             Fragment_1 mFragment = new Fragment_1();
-            mFragment.refresh(mtitle[i]);
+            mFragment.setMtitle(mtitle[i]);
             mFragments.add(mFragment);
         }
         mViewpagerAdapter.setFragments(mFragments);

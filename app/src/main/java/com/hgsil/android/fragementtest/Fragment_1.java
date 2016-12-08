@@ -15,6 +15,7 @@ import android.widget.TextView;
 public class Fragment_1 extends Fragment{
     private View view;
     private TextView mTextView;
+    String mtitle;
     @Nullable
     @Override
 
@@ -24,7 +25,13 @@ public class Fragment_1 extends Fragment{
         return view;
     }
 
-    public void refresh(String title){
-        mTextView.setText(title);
+    public void setMtitle(String mtitle) {
+        this.mtitle = mtitle;
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        mTextView.setText(mtitle);
     }
 }
